@@ -1,5 +1,6 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
+import 'package:wedding_app/photolist.dart';
 
 class HomePage extends StatefulWidget {
   static String tag = 'home-page';
@@ -54,22 +55,27 @@ class _HomePageState extends State<HomePage> {
             mainAxisSpacing: 10,
             crossAxisCount: 2,
             children: <Widget>[
-              Card(
-                child: Container(
-                  child: Column(
-                    crossAxisAlignment:CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/img/photographer.png',
-                        height: 36,
-                        width: 36,
-                      ),
-                      SizedBox(height: 8.0,),
-                      Text(
-                        "Photographer",style: TextStyle(fontSize: 12),
-                      )
-                    ],
+              InkWell(
+                onTap: (){
+                  Navigator.pushNamed(context, PhotoList.tag);
+                },
+                child: Card(
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment:CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/img/photographer.png',
+                          height: 36,
+                          width: 36,
+                        ),
+                        SizedBox(height: 8.0,),
+                        Text(
+                          "Photographer",style: TextStyle(fontSize: 12),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
