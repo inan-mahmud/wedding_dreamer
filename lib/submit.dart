@@ -199,7 +199,7 @@ class _SubmitState extends State<Submit> {
                         }
                       },
                       padding: EdgeInsets.all(12),
-                      color: Colors.lightGreen,
+                      color: Colors.teal,
                       child: Text('Confirm Booking'.toUpperCase(),
                           style: TextStyle(color: Colors.white)),
                     ),
